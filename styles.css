@@ -18,6 +18,7 @@
   --font-md: 2.5rem;
   --font-sm: 1rem;
   --color-primary: hsl(192, 37%, 48%);
+  --color-primary-overlay: hsla(192, 37%, 48%, 90%);
   --color-secondary: hsl(268, 34%, 53%);
   --color-dark: hsl(240, 21%, 20%);
   --color-light: hsl(240, 10%, 57%);
@@ -79,6 +80,9 @@ body {
   width: 3.5em;
   height: 3.5em;
   border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-light);
+  font-weight: 900;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,6 +132,7 @@ body {
   align-items: center;
   gap: 3em;
   padding-top: 3em;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -135,7 +140,7 @@ body {
 }
 
 .hero__img {
-  max-width: 130%;
+  max-width: 125%;
 }
 
 .hero__title {
@@ -171,4 +176,24 @@ body {
 
 .gallery__img {
   border-radius: 0.5em;
+}
+
+/* FOOTER */
+.footer {
+  background-image: linear-gradient(
+      var(--color-primary-overlay),
+      var(--color-primary-overlay)
+    ),
+    url("./assets/desktop/image-footer.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+}
+
+.footer__title {
+  color: inherit;
+}
+
+.footer__text {
+  margin-bottom: 2em;
 }
