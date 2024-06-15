@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Red Hat Display";
+  font-weight: 500;
+  src: url("./assets/fonts/red-hat.display-medium-webfont.woff2")
+      format("woff2"),
+    url("./assets/fonts/red-hat.display-medium-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-weight: 900;
+  src: url("./assets/fonts/red-hat.display-black-webfont.woff2") format("woff2"),
+    url("./assets/fonts/red-hat.display-black-webfont.woff") format("woff");
+}
+
+:root {
+  --font-lg: 4rem;
+  --font-md: 2.5rem;
+  --font-sm: 1rem;
+  --color-primary: hsl(192, 37%, 48%);
+  --color-secondary: hsl(268, 34%, 53%);
+  --color-dark: hsl(240, 21%, 20%);
+  --color-light: hsl(240, 10%, 57%);
+  --color-white: hsl(0, 0%, 98%);
+  --color-primary-light: hsl(192, 90%, 77%);
+  --color-secondary-light: hsl(268, 100%, 86%);
+}
+
+*,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Red Hat Display";
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
