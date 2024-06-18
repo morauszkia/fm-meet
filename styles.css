@@ -14,9 +14,6 @@
 }
 
 :root {
-  --font-lg: 4rem;
-  --font-md: 2.5rem;
-  --font-sm: 1rem;
   --color-primary: hsl(192, 37%, 48%);
   --color-primary-overlay: hsla(192, 37%, 48%, 90%);
   --color-secondary: hsl(268, 34%, 53%);
@@ -42,6 +39,7 @@ img {
 body {
   font-family: "Red Hat Display";
   font-weight: 500;
+  font-size: clamp(1rem, 0.75rem + 1vw, 1.125rem);
   color: var(--color-light);
 }
 
@@ -110,10 +108,11 @@ body {
 
 .section-title {
   color: var(--color-dark);
-  font-size: 2rem;
+  font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
   font-weight: 900;
   line-height: 1.125;
-  margin-bottom: 1em;
+  margin: 0 auto 1em auto;
+  width: min(100%, 28.5rem);
 }
 
 .section-text {
@@ -143,8 +142,13 @@ body {
   max-width: 125%;
 }
 
+.hero__content {
+  width: min(100%, 28rem);
+  margin: 0 auto;
+}
+
 .hero__title {
-  font-size: var(--font-md);
+  font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
   color: var(--color-dark);
   font-weight: 900;
   line-height: 1;
@@ -157,7 +161,9 @@ body {
 
 .btn-container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 1em;
 }
@@ -178,6 +184,11 @@ body {
   border-radius: 0.5em;
 }
 
+.features__container {
+  width: min(100%, 33.75rem);
+  margin: 0 auto;
+}
+
 /* FOOTER */
 .footer {
   background-image: linear-gradient(
@@ -196,4 +207,10 @@ body {
 
 .footer__text {
   margin-bottom: 2em;
+}
+
+@media (min-width: 48rem) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
