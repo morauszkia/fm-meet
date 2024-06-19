@@ -61,6 +61,19 @@ body {
   border: none;
   border-radius: 100px;
   background-color: var(--color-secondary);
+  transition: all 0.2s ease-in;
+}
+
+.btn:focus,
+.btn:hover,
+.btn:active {
+  box-shadow: inset -8rem 0 0 0 var(--color-secondary-light),
+    inset 8rem 0 0 0 var(--color-secondary-light);
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
 }
 
 .version {
@@ -188,6 +201,13 @@ body {
 
 .hero__cta {
   background-color: var(--color-primary);
+}
+
+.hero__cta:hover,
+.hero__cta:focus,
+.hero_cta:active {
+  box-shadow: inset -8em 0 0 0 var(--color-primary-light),
+    inset 8em 0 0 0 var(--color-primary-light);
 }
 
 /* FEATURES */
