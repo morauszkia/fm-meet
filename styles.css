@@ -150,6 +150,7 @@ body {
   align-items: center;
   width: 110%;
   overflow: hidden;
+  container-type: inline-size;
 }
 
 .hero__container > * {
@@ -158,14 +159,14 @@ body {
 }
 
 .hero__content {
-  width: min(100%, 32rem);
+  width: min(100%, 45rem);
   margin: 0 auto;
   padding: 0 3rem;
   text-align: center;
 }
 
 .hero__title {
-  font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
+  font-size: clamp(2.5rem, 1rem + 3cqi, 4rem);
   color: var(--color-dark);
   font-weight: 900;
   line-height: 1;
@@ -240,7 +241,7 @@ body {
   .hero__img--half {
     display: block;
     object-fit: cover;
-    width: 30%;
+    width: 25%;
   }
 
   .hero__img--half:first-of-type {
