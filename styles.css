@@ -32,6 +32,11 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  border: none;
+  outline: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -54,6 +59,7 @@ body {
 }
 
 .btn {
+  display: inline-block;
   font: inherit;
   color: var(--color-white);
   font-weight: 900;
@@ -61,14 +67,36 @@ body {
   border: none;
   border-radius: 100px;
   background-color: var(--color-secondary);
-  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.btn:focus,
-.btn:hover,
-.btn:active {
-  box-shadow: inset -8rem 0 0 0 var(--color-secondary-light),
-    inset 8rem 0 0 0 var(--color-secondary-light);
+.btn::before,
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  background-color: var(--color-secondary-light);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn::before {
+  left: 0;
+}
+
+.btn::after {
+  right: 0;
+}
+
+.btn:hover::before,
+.btn:hover::after,
+.btn:focus::before,
+.btn:focus::after {
+  width: 50%;
 }
 
 .btn:link,
@@ -203,11 +231,9 @@ body {
   background-color: var(--color-primary);
 }
 
-.hero__cta:hover,
-.hero__cta:focus,
-.hero_cta:active {
-  box-shadow: inset -8em 0 0 0 var(--color-primary-light),
-    inset 8em 0 0 0 var(--color-primary-light);
+.hero__cta::before,
+.hero__cta::after {
+  background-color: var(--color-primary-light);
 }
 
 /* FEATURES */
