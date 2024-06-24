@@ -96,7 +96,7 @@ body {
 .btn:hover::after,
 .btn:focus::before,
 .btn:focus::after {
-  width: 50%;
+  width: 52%;
 }
 
 .btn:link,
