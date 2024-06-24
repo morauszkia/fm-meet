@@ -259,9 +259,9 @@ body {
       var(--color-primary-overlay),
       var(--color-primary-overlay)
     ),
-    url("./assets/desktop/image-footer.jpg");
+    url("./assets/mobile/image-footer.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   color: var(--color-white);
 }
 
@@ -276,6 +276,14 @@ body {
 @media (min-width: 40rem) {
   .gallery {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer {
+    background-image: linear-gradient(
+        var(--color-primary-overlay),
+        var(--color-primary-overlay)
+      ),
+      url("./assets/tablet/image-footer.jpg");
   }
 }
 
@@ -300,6 +308,14 @@ body {
 }
 
 @media (min-width: 75rem) {
+  .footer {
+    background-image: linear-gradient(
+        var(--color-primary-overlay),
+        var(--color-primary-overlay)
+      ),
+      url("./assets/desktop/image-footer.jpg");
+  }
+
   .footer__content {
     display: flex;
     gap: 3rem;
